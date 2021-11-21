@@ -27,6 +27,45 @@ namespace BasketKata.Repository
             return price;
         }
 
+        
+        public BasketItem CreateBasketItem(string sku)
+        {
+            var item = GetItem(sku);
+            var unitPrice = GetItemPrice(sku);
 
+            var basketItem = new BasketItem()
+            {
+                Id = GenerateId(),
+                Price = unitPrice.Price,
+                SKU = item.SKU
+                //need to add promotion prop
+            };
+
+            return basketItem;
+        }
+
+        public Basket AddItemToBasket(int id, BasketItem basketItem)
+        {
+            var basketInfo = _basketService.GetBasket(id);
+
+            var basketItems = basketInfo.Items;
+            basketItems.Add(basketItem);
+
+            var basket = new Basket()
+            {
+                Id = basketInfo == null ? GenerateId() : basketInfo.Id,
+                TotalPrice = basketItem.Price + basketInfo.TotalPrice,
+                Items = basketItems
+            };
+
+            return basket;
+        }
+
+        private int GenerateId()
+        {
+            Random rnd = new Random();
+            int id = rnd.Next(0, 100);
+            return id;
+        }
     }
 }

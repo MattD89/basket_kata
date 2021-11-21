@@ -9,5 +9,6 @@ namespace BasketKata.Service
     {
         Item GetItem(string sku);
         UnitPrice GetPrice(string sku);
+        Basket GetBasket(int id);
     }
 }
