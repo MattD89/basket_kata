@@ -10,8 +10,6 @@ namespace BasketKata.Repository
         Item GetItem(string sku);
         UnitPrice GetItemPrice(string sku);
         BasketItem CreateBasketItem(string sku);
-        Basket AddItemToBasket(int id, BasketItem basketItem)
-        //addItemToBasket
-
+        Basket AddItemToBasket(int id, BasketItem basketItem);
     }
 }
