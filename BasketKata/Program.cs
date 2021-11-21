@@ -6,7 +6,7 @@ namespace BasketKata
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //add to basket method to be added.
         }
     }
 }
