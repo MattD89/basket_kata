@@ -9,7 +9,7 @@ namespace BasketKata.Repository
     {
         Item GetItem(string sku);
         UnitPrice GetItemPrice(string sku);
-        
+
         //addItemToBasket
 
     }
