@@ -37,8 +37,8 @@ namespace BasketKata.Repository
             {
                 Id = GenerateId(),
                 Price = unitPrice.Price,
-                SKU = item.SKU
-                //need to add promotion prop
+                SKU = item.SKU,
+                Promo = null
             };
 
             return basketItem;
