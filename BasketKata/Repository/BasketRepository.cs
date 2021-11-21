@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BasketKata.Repository
 {
-    class BasketRepository : IBasketRepo
+    class BasketRepository : IBasketRepository
     {
     }
 }
