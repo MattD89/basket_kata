@@ -14,5 +14,11 @@ namespace BasketKata.Service
             var items = new DbItem().Items;
             return items.Where(x => x.SKU == sku).FirstOrDefault();
         }
+
+        public UnitPrice GetPrice(string sku)
+        {
+            var prices = new DbPrice().ItemPrices;
+            return prices.Where(x => x.SKU == sku).FirstOrDefault();
+        }
     }
 }

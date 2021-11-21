@@ -8,5 +8,6 @@ namespace BasketKata.Service
     interface IBasketService
     {
         Item GetItem(string sku);
+        UnitPrice GetPrice(string sku);
     }
 }

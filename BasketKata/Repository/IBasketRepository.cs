@@ -8,7 +8,7 @@ namespace BasketKata.Repository
     interface IBasketRepository
     {
         Item GetItem(string sku);
-        UnitPrice GetItemPrice();
+        UnitPrice GetItemPrice(string sku);
         
         //addItemToBasket
 

@@ -21,9 +21,10 @@ namespace BasketKata.Repository
             return item;
         }
 
-        public UnitPrice GetItemPrice()
+        public UnitPrice GetItemPrice(string sku)
         {
-            throw new NotImplementedException();
+            var price = _basketService.GetPrice(sku);
+            return price;
         }
     }
 }
